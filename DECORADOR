@@ -1,0 +1,21 @@
+def meu_decorador(funcao):
+    def envelope(*args):
+        print('Funcao 1')
+        funcao(*args)
+        print('funcao2')
+
+    return envelope(funcao)
+    
+
+
+
+
+
+@meu_decorador
+def olamundo(nome):
+    print(f'Ola mundo {nome}')
+
+
+
+
+olamundo('josé')
